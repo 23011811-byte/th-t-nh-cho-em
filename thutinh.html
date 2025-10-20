@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thư gửi em 💌</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fff0f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      background-color: #ff5f9e;
+      transform: rotate(-45deg);
+      cursor: pointer;
+      animation: heartbeat 1.5s infinite;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background-color: #ff5f9e;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -60px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: 60px;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1) rotate(-45deg); }
+      50% { transform: scale(1.1) rotate(-45deg); }
+    }
+
+    .letter {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fffafc;
+      color: #333;
+      overflow-y: auto;
+      padding: 40px 20px;
+      text-align: justify;
+      line-height: 1.6;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff5f9e;
+      margin-bottom: 20px;
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    .signature img {
+      width: 140px;
+      margin-top: 10px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #ffc0cb;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart" id="heart"></div>
+
+  <div class="letter" id="letter">
+    <h2>Hà Nội, 20/10/2025</h2>
+    <p>Em yêu dấu,</p>
+    <p>Đây là bức thư đầu tiên em nhận được từ tôi, tôi nghĩ em cũng bất ngờ khi nhận được nó, nhưng làm em bất ngờ luôn là điều tôi muốn ; 3 . Thật ra không phải tôi không viết thư, nhưng tôi chưa từng gửi, và chúng đa số nằm trên điện thoại, và 1 số em đọc được qua ig clone. Chắc là bất ngờ lắm đúng không, sến súa lắm đúng không, hehehe, không phải ngẫu nhiên mà dù chọn theo khối A, điểm văn khi đi thi của tôi chưa bao giờ dưới điểm giỏi : > hôm nay cho em nếm trọn sự ngọt ngào này, sự hoa mỹ này, qua từng con chữ của Đỗ Tổng đây😎.!!! </p>
+    <p>Hôm nay là 20/10, vừa qua cũng là 14/10, là mốc thời gian chúng ta yêu nhau được 8 tháng, nhưng để mà nói, thật ra mình dính nhau từ tháng 1 tới giờ hehe. Trước tiên, cho phép tôi được cảm ơn em vì những ngày tháng qua, vì tất cả những sự dịu dàng, ngọt ngào em dành cho tôi. Cảm ơn em vì đã luôn ở cạnh tôi dù là lúc vui hay lúc buồn. Đối với tôi, những khoảnh khắc ấy là vô giá, mà tôi sẽ luôn mang theo trong lòng mình dù ở bất cứ đâu. Tình yêu này đối với tôi có ý nghĩa rất to lớn, trước khi em tới, tôi đã nghĩ phiên bản Dương khi yêu đương này sẽ chẳng bao giờ quay lại, bởi chính tôi đã tự chôn vùi nó, vào sâu thẳm trong mình, không muốn ai nhìn thấy nó, chỉ nhìn thấy 1 phiên bản nhạt nhẽo, gai góc, không muốn nói chuyện với ai.. Có thể em không tin, nhưng lần đấy, vì ngẫu hứng, tôi tự dưng tải lại fb date, và cũng quẹt kha khá cô, nhưng lại chỉ nhắn tin và đi date với mình em, và sau đó thì em biết rồi đấy. Đúng là duyên tới thì không cản được hehe 😋</p>
+    <p>Hôm nay, toi chúc em có 1 ngày thật hạnh phúc, thật vui vẻ khi ở cạnh toi, chúc cho em từ nay về sau được cười nhiều hơn nữa, bên tôi thêm 100 cái 20/10 nữa, và sớm trở thành người phụ nữ của tôi nhé em yêu, ehehehehehehhehehee 🤤.</p>
+    <div class="signature">
+      <p>Tình iu bự to của em 💖</p>
+      <img src="Screenshot_2025-10-20-17-31-48-430_com.miui.notes-edit.jpg" alt="Chữ ký của Dương">
+    </div>
+  </div>
+
+  <script>
+    const heart = document.getElementById('heart');
+    const letter = document.getElementById('letter');
+
+    heart.addEventListener('click', () => {
+      heart.style.display = 'none';
+      letter.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
